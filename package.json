@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "my node first server",
+  "license": "ISC",
+  "author": "Hassan",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.1",
+    "express": "^5.1.0",
+    "mongoose": "^9.0.1",
+    "nodemon": "^3.1.11"
+  }
+}
