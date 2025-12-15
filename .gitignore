@@ -2,5 +2,6 @@
 
 # Dependecies
 node_modules/
+.env
 
 # Other entries
