@@ -20,17 +20,17 @@ router.post("/", async (req, res) => {
   }
 });
 
-// //GET method to get the person
-// router.get("/", async (req, res) => {
-//   try {
-//     const data = await Person.find();
-//     console.log("data is fetching...");
-//     res.status(200).json(data);
-//   } catch (err) {
-//     console.log("error occur:", err);
-//     res.status(500).json({ error: "Internal server Error" });
-//   }
-// });
+//GET method to get the person
+router.get("/", async (req, res) => {
+  try {
+    const data = await Person.find();
+    console.log("data is fetching...");
+    res.status(200).json(data);
+  } catch (err) {
+    console.log("error occur:", err);
+    res.status(500).json({ error: "Internal server Error" });
+  }
+});
 
 router.get("/:workType", async (req, res) => {
   try {
