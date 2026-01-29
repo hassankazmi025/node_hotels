@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const db = require("./db");
 const passport = require("./auth.js");
-
 require("dotenv").config();
 
 //body parser is middalware to convert the data in object for you automatically
@@ -33,8 +32,9 @@ const PersonRoutes = require("./routes/personRoutes");
 const menuRoutes = require("./routes/menuRoutes.js");
 
 // use the routers
-app.use("/person", localAuthMiddleware, PersonRoutes);
-app.use("/menu", localAuthMiddleware, menuRoutes);
+// app.use("/person", localAuthMiddleware, PersonRoutes);
+app.use("/person", PersonRoutes);
+app.use("/menu", menuRoutes);
 
 app.listen(PORT, () => {
   console.log("server is listing on port 3000");
